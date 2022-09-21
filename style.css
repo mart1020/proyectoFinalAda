@@ -1,41 +1,36 @@
 
 
-.color-black{
-  background-color:salmon;
-}
+/*CARTAS*/
 
 .card-image:hover img{
   transform: scale(1.2);
-  transition-duration: .3s;
-  filter: grayscale(90%);
+  transition-duration: .7s;
+  filter: grayscale(50%);
 }
 
 .card-image{
   overflow: hidden;
-  
+
 }
 
 .card:hover{
-  box-shadow: -11px 10px 35px -4px rgba(0,0,0,0.91);
+  box-shadow: 24px 11px 5px 0px rgba(242,168,225,0.82);
+  -webkit-box-shadow: 24px 11px 5px 0px rgba(242,168,225,0.82);
+  -moz-box-shadow: 24px 11px 5px 0px rgba(242,168,225,0.82);
   cursor: pointer;
 }
 
-.card-large{
-  height: 250px;
-  
-}
-
 .card-content{
-  height: 26vh;
+  height: 50vh;
+
 }
 
-/*la paginacion*/
+/*PAGINACION*/
 
 .pagination{
   display: flex;
   justify-content: center;
-  margin: 20px;
-
+  margin: 40px;
 }
 
 .pagination-button{
@@ -43,13 +38,14 @@
   height: 40px;
   cursor: pointer;
   display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 25px;
 }
 
 .pagination-button:disabled{
-  color: #757575
-  border-color #757575
+  color: gray;
+  border-color: gray;
 }
 
 .container-paginador{
@@ -59,7 +55,7 @@
   flex-direction: column;
 }
 
-/* loader*/
+/*LOADER*/
 
 .contenedor{
   width: 100%;
@@ -70,43 +66,36 @@
 }
 
 .loader {
-  position: relative;
-  animation: flix 3s ease-in infinite alternate;
-}
-.loader:before {
-  content: '';
-  display: block;
-  font-size: 0;
   width: 48px;
   height: 48px;
-  background-color: #fff ;
-  background-image:
-    radial-gradient(circle 12px at 22px 22px, #FF3D00 100%, transparent 0),
-    radial-gradient(circle 10px at 6px 40px, #FF3D00 100%, transparent 0),
-    radial-gradient(circle 14px at 31px -6px, #FF3D00 100%, transparent 0),
-    radial-gradient(circle 5px at 40px 30px, #FF3D00 100%, transparent 0);
   border-radius: 50%;
-  animation: rotate 1s linear infinite;
+  display: inline-block;
+  border-top: 4px solid purple;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
 }
-.loader:after {
-    content: '';
-    position: absolute;
-    top: 0%;
-    transform: translate(-50% , -100%);
-    left: 50%;
-    width: 24px;
-    height: 12px;
-    background: #fff;
-    border-radius: 50px 50px 0 0;
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid black;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
   }
-
-@keyframes flix {
-  0%  , 60% { transform: rotate(-10deg)}
-  100%  , 30% , 80% { transform: rotate(5deg)}
-}
-@keyframes rotate {
-  100%   { transform: rotate(360deg)}
-}
+  100% {
+    transform: rotate(360deg);
+  }
+} 
 
 .esconder{
   display: none;
