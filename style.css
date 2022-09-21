@@ -1,5 +1,25 @@
 
 
+
+/*letra-----------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/*--------------------------------*/
+
+h5{
+  font-family: Pacifico;
+  font-size: large;
+}
+
+.brand-logo{
+  font-family: Pacifico;
+  font-size: larger;
+}
+
+.footer-copyright{
+  font-family: Pacifico;
+  font-size: larger;
+}
+
 /*CARTAS*/
 
 .card-image:hover img{
