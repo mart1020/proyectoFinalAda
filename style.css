@@ -93,7 +93,7 @@ h5{
   border-top: 4px solid purple;
   border-right: 4px solid transparent;
   box-sizing: border-box;
-  animation: rotation 0.5s linear infinite;
+  animation: rotation 1s linear infinite;
 }
 .loader::after {
   content: '';  
@@ -106,7 +106,7 @@ h5{
   border-radius: 50%;
   border-left: 4px solid black;
   border-bottom: 4px solid transparent;
-  animation: rotation 0.5s linear infinite reverse;
+  animation: rotation 1s linear infinite reverse;
 }
 @keyframes rotation {
   0% {
